@@ -1,0 +1,9 @@
+.ResidentInfo{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    background-color: aqua;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
