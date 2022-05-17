@@ -4,17 +4,25 @@ import React, { useEffect, useState } from 'react';
 
 
 const Location = () => {
+
+    const [resident, setResidents] = useState({})
+    const [id, setId] = useState("")
+    const [loading, setLoading] = useState(false)
+
+    
     useEffect(() => {
         const random = Math.floor(Math.random() * 126) + 1
         // Aquí me indica que hay un error enn setLoading
-        axios.get(`https://rickandmortyapi.com/api/location/${random}`).then(res => setresidents(res.data), setLoading(L => !loading))
+        axios.get(`https://rickandmortyapi.com/api/location/${random}`)
+        .then(res => {
+            setResidents(res.data)
+            setLoading(!loading)
+        })
     }, [])
 
-    const [resident, setresidents] = useState({})
-    const [id, setId] = useState("")
-    const [loading, setLoading] = useState(false)
+    
     const searchType = () => {
-        axios.get(`https://rickandmortyapi.com/api/location/${id}`).then(res => setresidents(res.data))
+        axios.get(`https://rickandmortyapi.com/api/location/${id}`).then(res => setResidents(res.data))
     }
     return (
         <div >

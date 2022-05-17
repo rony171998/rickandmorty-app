@@ -3,6 +3,10 @@ import axios from 'axios';
 
 
 const ResidentInfo = ({ url }) => {
+
+    const [residents, setResidents] = useState({})
+    const [loading, setLoading] = useState(false)
+
     useEffect(() => {
         axios.get(`${url}`)
             .then(res => {
@@ -11,8 +15,7 @@ const ResidentInfo = ({ url }) => {
             })
     }, [])
 
-    const [residents, setResidents] = useState({})
-    const [loading, setLoading] = useState(false)
+    
 
     return (
         <div>
