@@ -15,7 +15,6 @@ const Location = () => {
     const [loading, setLoading] = useState(false)
     const searchType = () => {
         axios.get(`https://rickandmortyapi.com/api/location/${id}`).then(res => setresidents(res.data))
-
     }
     return (
         <div >
@@ -71,7 +70,7 @@ const Location = () => {
                         <ul>
                             {
                                 resident.residents?.map(resident => (
-                                    <li className="cards_item" key={resident.name} >
+                                    <li className="cards_item" key={resident} >
                                         <ResidentInfo url={resident} />
                                     </li>
                                 ))
