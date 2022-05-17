@@ -9,18 +9,16 @@ const Location = () => {
     const [id, setId] = useState("")
     const [loading, setLoading] = useState(false)
 
-    
-    useEffect(() => {
+    useEffect((loading) => {
         const random = Math.floor(Math.random() * 126) + 1
-        // Aquí me indica que hay un error enn setLoading
         axios.get(`https://rickandmortyapi.com/api/location/${random}`)
-        .then(res => {
-            setResidents(res.data)
-            setLoading(!loading)
-        })
+            .then(res => {
+                setResidents(res.data)
+                setLoading(!loading);
+            })
     }, [])
 
-    
+
     const searchType = () => {
         axios.get(`https://rickandmortyapi.com/api/location/${id}`).then(res => setResidents(res.data))
     }
