@@ -71,7 +71,7 @@ const Location = () => {
                         <ul>
                             {
                                 resident.residents?.map(resident => (
-                                    <li className="cards_item" key={resident.name} >
+                                    <li className="cards_item" key={resident.id}>
                                         <ResidentInfo url={resident} />
                                     </li>
                                 ))

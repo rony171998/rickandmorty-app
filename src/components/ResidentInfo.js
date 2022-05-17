@@ -45,9 +45,9 @@ const ResidentInfo = ({ url }) => {
                     }}>
                     <div className="card_image"><img src={residents.image} alt="" /></div>
                     <h2 className="card_name">{residents.name}</h2>
-                    <p className="card_title">RAZA<br className="card_text">{residents.species}</br></p>
-                    <p className="card_title">ORIGEN<br className="card_text">{residents.origin?.name}</br></p>
-                    <p className="card_title">Aparición en episodios<br className="card_text">{residents.episode?.length}</br></p>
+                    <p className="card_title">RAZA<b className="card_text">{residents.species}</b></p>
+                    <p className="card_title">ORIGEN<b className="card_text">{residents.origin?.name}</b></p>
+                    <p className="card_title">Aparición en episodios<b className="card_text">{residents.episode?.length}</b></p>
                     <button className="btn card_btn">Read More</button>
                 </div>
             }
