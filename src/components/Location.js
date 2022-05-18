@@ -1,6 +1,7 @@
 import ResidentInfo from './ResidentInfo';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import "./Location.css";
 
 
 const Location = () => {
@@ -33,10 +34,13 @@ const Location = () => {
                 :
                 <div >
 
-                    <img src="https://p4.wallpaperbetter.com/wallpaper/178/471/787/rick-and-morty-run-the-jewels-vector-graphics-wallpaper-preview.jpg"
-                        alt="" className="background" />
+                     <img src="https://p4.wallpaperbetter.com/wallpaper/178/471/787/rick-and-morty-run-the-jewels-vector-graphics-wallpaper-preview.jpg"
+                        alt="" className="background" /> 
 
+                    <h1 className='title'
+                    >Rick and Morty Wiki</h1>
                     <div className="main">
+                        
                         <div className="searchbar-container">
                             <div className="father-container">
                                 <input type="text"

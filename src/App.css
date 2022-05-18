@@ -29,9 +29,10 @@ body {
 .main {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 50%;
+    padding-top: 46%;
     justify-content: center;
     align-items: center;
+    color: #ffffff;
 }
 
 h1 {
@@ -42,7 +43,6 @@ h1 {
 
 .card_name {
     color: #ffffff;
-
 }
 
 .father-container {
@@ -54,7 +54,7 @@ h1 {
 }
 
 .searchbar-container {
-    margin-top: calc(-38%);
+    margin-top: calc(-55%);
     background: #062226;
     color: white;
     display: flex;
