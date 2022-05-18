@@ -21,7 +21,12 @@ const Location = () => {
 
 
     const searchType = () => {
-        axios.get(`https://rickandmortyapi.com/api/location/${id}`).then(res => setResidents(res.data))
+        if (id<126 && id>=1) {
+          axios.get(`https://rickandmortyapi.com/api/location/${id}`).then(res => setResidents(res.data))
+        }else{
+            alert("No existe localizacion")
+        }
+        
     }
     return (
         <div >
@@ -34,20 +39,21 @@ const Location = () => {
                 :
                 <div >
 
-                     <img src="https://p4.wallpaperbetter.com/wallpaper/178/471/787/rick-and-morty-run-the-jewels-vector-graphics-wallpaper-preview.jpg"
-                        alt="" className="background" /> 
+                    <img src="https://p4.wallpaperbetter.com/wallpaper/178/471/787/rick-and-morty-run-the-jewels-vector-graphics-wallpaper-preview.jpg"
+                        alt="" className="background" />
 
-                    <h1 className='title'
-                    >Rick and Morty Wiki</h1>
+                    <h1 className='title'>Rick and Morty Wiki</h1>
+                    
+                    <input className='input' type="number"
+                        onChange={e => setId(e.target.value)}
+                        value={id}
+                    />
+                    <button onClick={searchType}>Buscar</button>
                     <div className="main">
-                        
+
                         <div className="searchbar-container">
                             <div className="father-container">
-                                <input type="text"
-                                    onChange={e => setId(e.target.value)}
-                                    value={id}
-                                />
-                                <button onClick={searchType}>Buscar</button>
+
                                 <div className="container">
                                     <div className="row">
                                         <div className="column">
@@ -77,6 +83,13 @@ const Location = () => {
                                 </div>
                             </div>
                         </div>
+                        {
+                        resident.residents?.length === 0 ?  
+                        <div className='people0'>
+                            <h1 className='title'>Sin Poblation</h1>
+                            <img src="https://i.pinimg.com/originals/4d/f4/c5/4df4c5d5342fd4a1c0f6a9ca3bdf2bd8.gif" alt="" />
+                            </div>
+                        :
                         <ul>
                             {
                                 resident.residents?.map(resident => (
@@ -86,6 +99,8 @@ const Location = () => {
                                 ))
                             }
                         </ul>
+                        }
+                        
                     </div>
                 </div>
             }

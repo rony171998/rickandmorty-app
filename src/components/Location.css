@@ -1,6 +1,26 @@
 .title{
-    margin-top: 20%;
-    position: relative;
     color:white;
+    font-size: 50px;
     
+}
+.input{
+    margin-left: 30%;
+    width: 30%;
+    
+}
+.searchbar-container {
+    
+    background: #062226;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.people0{
+    margin-top: 10%;
+    text-align: center;
+}
+.people0 img{
+    border-radius: 100%;
 }

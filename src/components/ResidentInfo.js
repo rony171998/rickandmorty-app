@@ -25,7 +25,8 @@ const ResidentInfo = ({ url }) => {
                         <img src="https://cdn.dribbble.com/users/233030/screenshots/3932726/rick-sanchez.gif" alt="" />
                     </div>
                 </div>
-                :
+                : 
+                
                 <div className="card"
                     style={{
                         backgroundImage: `url(${residents.image})`,
