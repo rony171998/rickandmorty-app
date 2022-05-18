@@ -11,11 +11,11 @@ const ResidentInfo = ({ url }) => {
         axios.get(`${url}`)
             .then(res => {
                 setResidents(res.data)
-                setLoading(previus=>({...!loading}))
+                setLoading(previus => ({ ...!loading }))
             })
-    }, [loading,url])
+    }, [loading, url])
 
-    
+
 
     return (
         <div>
