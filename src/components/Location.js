@@ -2,6 +2,7 @@ import ResidentInfo from './ResidentInfo';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import "./Location.css";
+import Card from './Card';
 
 
 const Location = () => {
@@ -51,38 +52,7 @@ const Location = () => {
                     <button onClick={searchType}>Buscar</button>
                     <div className="main">
 
-                        <div className="searchbar-container">
-                            <div className="father-container">
-
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="column">
-                                            <h3 className="title-container">Id: </h3>
-                                            <p className="text-container">{resident.id} </p>
-                                        </div>
-                                        <div className="column">
-                                            <h3 className="title-container">Name: </h3>
-                                            <p className="text-container">{resident.name} </p>
-
-                                        </div>
-                                        <div className="column">
-                                            <h3 className="title-container">Dimension: </h3>
-                                            <p className="text-container">{resident.dimension} </p>
-
-                                        </div>
-                                        <div className="column">
-                                            <h3 className="title-container">Type: </h3>
-                                            <p className="text-container">{resident.type} </p>
-
-                                        </div>
-                                        <div className="column">
-                                            <h3 className="title-container">Poblation: </h3>
-                                            <p className="text-container">{resident.residents?.length} </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
                         {
                         resident.residents?.length === 0 ?  
                         <div className='people0'>
@@ -90,11 +60,11 @@ const Location = () => {
                             <img src="https://i.pinimg.com/originals/4d/f4/c5/4df4c5d5342fd4a1c0f6a9ca3bdf2bd8.gif" alt="" />
                             </div>
                         :
-                        <ul>
+                        <ul class="cards-container">
                             {
                                 resident.residents?.map(resident => (
                                     <li className="cards_item" key={resident} >
-                                        <ResidentInfo url={resident} />
+                                        <Card url={resident} />
                                     </li>
                                 ))
                             }

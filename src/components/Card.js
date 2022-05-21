@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import Card from './Card';
-import './Card.css'
+import './Card.css';
 
-
-const ResidentInfo = ({ url }) => {
+const Card = ({url}) => {
 
     const [residents, setResidents] = useState({})
     const [loading, setLoading] = useState(false)
@@ -17,18 +15,9 @@ const ResidentInfo = ({ url }) => {
             })
     }, [loading, url])
 
-
-
     return (
+        <>
         <div>
-            {loading === false ?
-                <div className="animation-container">
-                    <div className="animation">
-                        <img src="https://cdn.dribbble.com/users/233030/screenshots/3932726/rick-sanchez.gif" alt="" />
-                    </div>
-                </div>
-                : 
-                <div>
             <div className="card">
                 <div className="card-header">
                     <img src={residents.image} alt="rick" className="header-image" />
@@ -55,15 +44,13 @@ const ResidentInfo = ({ url }) => {
                         <span className="value">{residents.origin?.name}</span>
                     </div>
                     <div className="info-item">
-                        <span className="name">LAST LOCATION</span>
+                        <span className="name">LAST: LOCATION</span>
                         <span className="value">unknown</span>
                     </div>
                 </div>
             </div>
         </div>
-            }
-        </div>
-    );
-};
-
-export default ResidentInfo;
+        </>
+    )
+}
+export default Card;
