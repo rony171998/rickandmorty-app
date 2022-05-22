@@ -1,4 +1,3 @@
-import ResidentInfo from './ResidentInfo';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import "./Location.css";
