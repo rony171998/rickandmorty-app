@@ -42,7 +42,7 @@ const Location = () => {
         setId(result.id)
     }
 
-    
+
     return (
         <div >
             {loading === false ?
@@ -107,21 +107,24 @@ const Location = () => {
                     <div >
                         {
                             resident.residents.length > 9 &&
-                            <div className='pageContent'> 
-                                <h1>1</h1> 
-                                <h1>2</h1> 
-                                <h1>3</h1> 
-                                <h1>4</h1> 
-                                <h1>5</h1> 
-                                <h1>6</h1> 
+                            <div className='pageContent'>
+                                <h1>1</h1>
+                                <h1>2</h1>
+                                <h1>3</h1>
+                                <h1>4</h1>
+                                <h1>5</h1>
+                                <h1>6</h1>
 
-                                
+
                             </div>
                         }
 
                     </div>
+
                 </div>
+
             }
+
         </div>
     )
 }

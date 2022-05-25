@@ -1,0 +1,54 @@
+
+footer{
+    margin-top: 250px;
+    margin-bottom: 0;
+    text-align: center;
+    color:  white; 
+    
+}
+.Pie-pagina{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    text-align: center;
+    
+}
+.Pie-pagina-center{
+    
+    margin-left: 100px;
+    text-align: left;
+}
+.Pie-pagina div h3{
+    margin: 20px;
+    margin-left: 0;
+    text-align: left;
+    color: grey;
+    font-style: normal;
+}
+.Pie-pagina-last img{
+    
+    width: 50%;
+    margin-left: 8px;
+    margin-top: 12px;
+    flex-direction: row;
+}
+.Pie-pagina-firts{
+    width: 20%;
+    margin-left: 100px;
+    text-align: left;
+}
+.Pie-pagina-last{
+    width: 10%;
+    margin-left: 100px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.Derechos-reservados{
+    text-decoration-color: #e5e5e5;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
