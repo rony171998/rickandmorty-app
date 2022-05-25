@@ -41,6 +41,12 @@ const Location = () => {
     const handleOnHover = (result) => {
         setId(result.id)
     }
+    const nextDimension =()=>{
+        const random = Math.floor(Math.random() * 126) + 1
+        setId(random)
+        searchType()
+        
+    }
 
 
     return (
@@ -90,6 +96,9 @@ const Location = () => {
                                 <div className='people0'>
                                     <h1 className='title'>Sin Poblation</h1>
                                     <img src="https://i.pinimg.com/originals/4d/f4/c5/4df4c5d5342fd4a1c0f6a9ca3bdf2bd8.gif" alt="" />
+                                    <br /><button onClick={nextDimension}>Next Dimension</button> 
+                                    {console.log(id)}
+                                    
                                 </div>
                                 :
                                 <ul className="cards-container">
@@ -120,11 +129,8 @@ const Location = () => {
                         }
 
                     </div>
-
                 </div>
-
             }
-
         </div>
     )
 }

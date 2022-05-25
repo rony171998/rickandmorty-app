@@ -22,9 +22,8 @@ body {
 }
 
 .main {
-    max-width: 1200px;
-    margin: 0 auto;
     margin-top: 20px;
+    margin-left: 5%;
     justify-content: center;
     align-items: center;
     color: #ffffff;
@@ -131,11 +130,10 @@ img {
 
 .cards-container {
     margin-top: 5%;
+    margin-bottom: 5%;
     display: grid;
     width: 50%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    
 }
 .cards_item {
     list-style: none;
