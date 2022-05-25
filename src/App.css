@@ -16,7 +16,7 @@ body {
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0;
-    background-color: #1b1a1d;
+    background-color: #05292E;
     justify-content: center;
     align-items: center;
 }
@@ -34,6 +34,8 @@ h1 {
     font-size: 24px;
     font-weight: 400;
     text-align: center;
+    color: #ffffff;
+
 }
 
 .card_name {
@@ -128,17 +130,16 @@ img {
 }
 
 .cards-container {
-    margin-top: 10%;
+    margin-top: 5%;
     display: grid;
+    width: 50%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 7fr 7fr 7fr;
-    grid-column-gap: 10%;
-    grid-row-gap: 1%;
-    justify-items: stretch;
-    align-items: stretch;
+    grid-template-rows: 1fr 1fr;
+    
 }
 .cards_item {
     list-style: none;
+    
 }
 @media (min-width: 40rem) {
     .cards_item {

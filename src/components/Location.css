@@ -24,3 +24,39 @@
 .people0 img{
     border-radius: 100%;
 }
+.bar-dimensity{
+    background-color: #062226;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    color: white;
+    width: 60%;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-left: 20%;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 30px;
+}
+.searchText{
+    width: 50%;
+    margin-left: 25%;
+    padding: 20px;
+    
+    flex-direction: row;
+}
+.searchText button{
+    margin-left: 10px;
+}
+.pageContent{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+    padding: 30px;
+}
+.pageContent h1{
+    padding: 30px;
+    margin-left: 10px;
+    background-color: #062226;
+    border-radius: 10px;
+}
